@@ -37,6 +37,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.0",
     "@napi-rs/cli": "1.0.4",
+    "@swc/helpers": "^0.2.11",
     "cross-env": "^7.0.0",
     "doctoc": "^1.4.0",
     "eslint": "^7.20.0",
@@ -65,5 +66,13 @@
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/parcel"
+  },
+  "browser": {
+    "@parcel/watcher": false,
+    "emphasize": false,
+    "open": false,
+    "react-dom": "preact/compat",
+    "react": "preact/compat",
+    "scheduler": false
   }
 }

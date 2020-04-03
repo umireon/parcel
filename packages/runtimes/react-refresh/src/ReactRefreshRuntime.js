@@ -34,7 +34,8 @@ export default (new Runtime({
         pkg?.peerDependencies?.react
       ) {
         return {
-          filePath: __filename,
+          filePath: '/app/VIRTUAL.js',
+          // filePath: __filename,
           code: CODE,
           isEntry: true,
         };

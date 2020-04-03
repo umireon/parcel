@@ -9,6 +9,7 @@ import type {
 import type {FileSystem} from '@parcel/fs';
 import type {ResolveResult} from './NodeResolverBase';
 
+export type {ResolveResult};
 export type InstallOptions = {
   installPeers?: boolean,
   saveDev?: boolean,
