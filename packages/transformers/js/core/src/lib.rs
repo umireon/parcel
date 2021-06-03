@@ -343,7 +343,7 @@ pub fn transform(config: Config) -> Result<TransformResult, std::io::Error> {
                 result.map = Some(String::from_utf8(map_buf).unwrap());
               }
             }
-            result.code = buf;
+            result.code = if buf.is_empty() { vec![32] } else { buf };
             Ok(result)
           },
         )
