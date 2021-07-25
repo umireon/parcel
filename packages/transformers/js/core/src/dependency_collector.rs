@@ -522,7 +522,8 @@ impl<'a> Fold for DependencyCollector<'a> {
     let node = if let Some(arg) = node.args.get(0) {
       if kind == DependencyKind::ServiceWorker || kind == DependencyKind::Worklet {
         let (source_type, opts) = if kind == DependencyKind::ServiceWorker {
-          match_worker_type(node.args.get(1))
+          // Service Workers does not support modules
+          (SourceType::Script, None)
         } else {
           // Worklets are always modules
           (SourceType::Module, None)
